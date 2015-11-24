@@ -1,6 +1,6 @@
 package first.common.dao;
 
-import java.util.List;
+import java.util.List; 
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,7 +17,7 @@ public class AbstractDAO {
         if(log.isDebugEnabled()){
             log.debug("\t QueryId  \t:  " + queryId);
         }
-    }
+    } 
      
     public Object insert(String queryId, Object params){
         printQueryId(queryId);
