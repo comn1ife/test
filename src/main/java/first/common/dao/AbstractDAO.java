@@ -1,6 +1,6 @@
 package first.common.dao;
 
-import java.util.List;
+import java.util.List; 
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -10,14 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class AbstractDAO {
     protected Log log = LogFactory.getLog(AbstractDAO.class);
     
-    @Autowired	    // context-mapper.xml에 선언했던 의존관계를 자동으로 주입
+    @Autowired	    // 이 어노테이션을 통해 context-mapper.xml에 선언했던 의존관계를 자동으로 주입
     private SqlSessionTemplate sqlSession;
      
     protected void printQueryId(String queryId) {
         if(log.isDebugEnabled()){
             log.debug("\t QueryId  \t:  " + queryId);
         }
-    }
+    } 
      
     public Object insert(String queryId, Object params){
         printQueryId(queryId);
